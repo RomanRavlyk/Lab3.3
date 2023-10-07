@@ -23,18 +23,19 @@ int main()
         y = R;
     else
         if (x > -7 - R && x <= -7 + R)
-            y = R - pow(R, 2)-pow((x-7), 2);
+            y = R - pow(R, 2) - pow((x - 7), 2);
         else
-            if (-7 < x <= -7 + R)
-                y = R + sqrt((R * R) - ((x + 7) * (x + 7)));
+            if ( x > - 7 + R && x <= -4)
+                y = R;
             else
-                if (x > -7 + R && x <= -4)
-                    y = R;
+                if (x > 4 &&  x <= 0)
+                    y = R + sqrt((R * R) - ((x + 7) * (x + 7)));
                 else
-                    if (x > 0 && x <= p)
+                    if (x > 0 && x <= p) {
                         y = sin(x);
+                    }
                     else
-                        y = x + p;
+                        y = x - p;
     cout << endl;
     cout << "y = " << y << endl;
 
